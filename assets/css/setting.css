@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/* ************************************************************************************************************************************************************
+						《 setting.css 》
+************************************************************************************************************************************************************ */
+
+/* ------------------------------ [ Font ] ------------------------------------------------------------------------------------------ */
+
+/* SpoqaHanSans */
+@font-face {
+	font-family: 'SpoqaHanSans';
+	font-weight: 700;
+	font-display: swap;
+	src:url('../font/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+		url('../font/SpoqaHanSansNeo-Bold.woff') format('woff'),
+		url('../font/SpoqaHanSansNeo-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'SpoqaHanSans';
+	font-weight: 500;
+	font-display: swap;
+	src:url('../font/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+		url('../font/SpoqaHanSansNeo-Medium.woff') format('woff'),
+		url('../font/SpoqaHanSansNeo-Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'SpoqaHanSans';
+	font-weight: 400;
+	font-display: swap;
+	src:url('../font/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+		url('../font/SpoqaHanSansNeo-Regular.woff') format('woff'),
+		url('../font/SpoqaHanSansNeo-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: 'SpoqaHanSans';
+	font-weight: 100;
+	font-display: swap;
+	src:url('../font/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+		url('../font/SpoqaHanSansNeo-Thin.woff') format('woff'),
+		url('../font/SpoqaHanSansNeo-Thin.otf') format('opentype');
+}
+
+/* ------------------------------ [ Layout Reset ] ------------------------------------------------------------------------------------------ */
+/* Reset */
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	color:#1C1C1C;
+	margin:0;
+	padding:0;
+}
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {font:1.6rem/1.4em 'SpoqaHanSans',sans-serif; font-weight:500;}
+button,input,textarea {font:1.6rem/1.4em 'SpoqaHanSans',sans-serif; font-weight:500;}
+select {font:1.6rem/1.4em 'SpoqaHanSans',sans-serif; font-weight:500;}
+::selection {color:#fff; background-color:#00ADEF;}
+button,input,textarea {
+	-webkit-text-size-adjust:none;
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+	border:none;
+	border-radius:0;
+	margin:0;
+	padding:0;
+}
+button {
+	background:none;
+	border:none;
+	color:inherit;
+	cursor:pointer;
+}
+button:disabled {
+	cursor:default;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	table-layout:fixed;
+	width:100%;
+}
+select {
+	background-color:transparent;
+	border:none;
+	letter-spacing:inherit;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-webkit-font-smoothing:antialiased;
+	border:none;
+	border-radius:0;
+	margin:0;
+	padding:0;
+}
+select::-ms-expand {
+	display:none; /* 화살표 없애기 for IE10, 11 */
+}
+address,caption,cite,code,dfn,em,th,var {
+	font-style:normal;
+}
+ul,li,ol {
+	list-style-type:none;
+}
+hr {
+	display:none;
+}
+legend,caption {
+	overflow:hidden;
+	visibility:hidden;
+	position:absolute;
+	font-size:0;
+	line-height:0;
+	height:0;
+	z-index:-1;
+}
+a,a:active,input:active,button:active,select:active,label:active,
+a:focus,input:focus,button:focus,select:focus,label:focus {
+	text-decoration:none;
+	outline:none;
+}
+a,span,em {
+	color:inherit;
+	font:inherit;
+	border:0;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing:antialiased;
+}
+a,input,button,select,label {
+	-webkit-tap-highlight-color:transparent;
+}
+::-webkit-input-placeholder {
+	color:#999999;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled::-webkit-input-placeholder {
+	color:#ababab;
+}
+:-moz-placeholder {
+	color:#999999;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled:-moz-placeholder {
+	color:#ababab;
+}
+::-moz-placeholder {
+	color:#999999;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled::-moz-placeholder {
+	color:#ababab;
+}
+:-ms-input-placeholder {
+	color:#D2D2D2;
+	font:inherit;
+	line-height:inherit;
+}
+input:disabled:-ms-input-placeholder {
+	color:#ababab;
+}
+textarea::placeholder {
+	color:#999999;
+}
+textarea::-webkit-placeholder {
+	color:#999999;
+}
+textarea::-moz-placeholder {
+	color:#999999;
+}
+textarea::-ms-placeholder {
+	color:#999999;
+}
+.blind {
+	overflow:hidden;
+	font-size:0;
+	line-height:0;
+	position:absolute;
+	height:0;
+	width:0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	box-shadow:0 0 0px 1000px #fff inset;
+	transition:background-color 5000s ease-in-out 0s;
+}

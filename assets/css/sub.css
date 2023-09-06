@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/* ************************************************************************************************************************************************************
+						《 서브 스타일 》
+************************************************************************************************************************************************************ */
+p, h3 {word-break: keep-all;}
+.sub_wrap {padding-top:230px; position:relative;}
+.sub_content {position:relative;}
+.sub_inner {max-width: 1165px; width:100%; margin:0 auto; padding:0 20px; box-sizing:border-box;}
+.txt_inner {max-width: 1240px; width:100%; margin:0 auto; padding:0 20px; box-sizing:border-box;}
+
+/* ============================== [ 공통 레이아웃 ] ========================================================================================== */
+
+/* -------------------- 타이틀영역 ---------------------------------------- */
+.sub_tit_area .inner {max-width: 1164px; width:100%; margin:0 auto; padding:0 20px; box-sizing:border-box;}
+.sub_tab {display:flex; margin-bottom:50px;}
+.sub_tab li ~ li {margin-left:40px;}
+.sub_tab a {padding-top:12px; font-weight:400; color:#949494; position:relative; display:block; text-align:center; word-break: keep-all;}
+.sub_tab a::after {display:none; content: ''; width:100%; height:2px; position:absolute; left:0; top:0; background-color:#00ADEF;}
+.sub_tab li.on a {font-weight:700; color:#00ADEF;}
+.sub_tab li.on a::after {display:block;}
+.sub_tit_area .sub_title {font-size:6rem; font-weight:700; margin-bottom:-38px;}
+
+/* 서브 배경 */
+.sub_bg {width:100%; height:404px;}
+.sub_bg span {display:block; width:100%; height:100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+.sub_01 .sub_bg span {background-image:url(../image/sub/bg_sub_01.jpg);}
+.sub_02 .sub_bg span {background-image:url(../image/sub/bg_sub_02.jpg);}
+.sub_03 .sub_bg span {background-image:url(../image/sub/bg_sub_03.jpg);}
+.sub_04 .sub_bg span {background-image:url(../image/sub/bg_sub_04.jpg);}
+.sub_05 .sub_bg span {background-image:url(../image/sub/bg_sub_05.jpg);}
+
+/* 컨텐츠 타이틀 */
+.sub_tit_01 {font-size:5.2rem; font-weight:700;word-break: keep-all;}
+.sub_tit_02 {padding-left:26px; font-size:4.2rem; font-weight:700; border-left:5px solid #707070; margin-bottom:90px;word-break: keep-all;}
+
+/* sticky menu */
+.sticky_menu {position: absolute; left:0; top:0; padding-top:150px; width:200px; z-index:1;}
+.sticky_menu.active {position:fixed;}
+.sticky_menu li ~ li {margin-top:10px;}
+.sticky_menu li a {font-weight:400; color:#949494; position:relative; padding-left:30px;}
+.sticky_menu li a::after {display:block; content: ''; width:0; height:2px; background-color:#00ADEF; position:absolute; left:0; top:calc(50% - 1px); transition: width .3s, opacity .3s; opacity:0;}
+.sticky_menu li.on a {color:#00ADEF; font-weight:700;}
+.sticky_menu li.on a::after {width:20px; opacity:1;}
+
+
+@media only screen and (max-width:1280px) {
+	.sub_wrap {padding-top:200px;}
+	.sub_tab {margin-bottom:40px;}
+	.sub_tab li ~ li {margin-left:30px;}
+	.sub_tit_02 {margin-bottom:80px;}
+	.sub_bg {height:350px;}
+
+	.sticky_menu {position:fixed; top:100px; width:100%; transition: top .2s; z-index:100; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color:#fff; padding-top:0;}
+	.pt_top.sticky_menu {top:0;}
+	.sticky_menu ul {display:flex; justify-content:center; align-items:center;}
+	.sticky_menu li {padding:0 20px; position:relative;}
+	.sticky_menu li ~ li {margin-top:0;}
+	.sticky_menu li ~ li::before {display:block; content: ''; position:absolute; left:0; top:50%; transform: translateY(-50%); background-color: #ccc; width:1px; height:14px;}
+	.sticky_menu li a {padding:25px 0; display:block;}
+	.sticky_menu li a::after {display:none;}
+}
+@media only screen and (max-width:767px) {
+	.sticky_menu {top: 70px;}
+	.sub_tit_area .inner {padding:0 16px;}
+	.sub_tab {margin-bottom:20px;}
+	.sub_tab li ~ li {margin-left:15px;}
+	.sub_tab a {font-size:14px;}
+	.sub_bg {height:300px;}
+	.sub_tit_area .sub_title {font-size:4.5rem; margin-bottom:-23px;}
+	.sub_tit_01 {font-size:4.4rem;}
+	.sub_tit_02 {margin-bottom:50px; padding-left:20px;}
+}
+
+/* ============================== [ CEO 인사말 ] ========================================================================================== */
+
+/* -------------------- CEO 인사말 ---------------------------------------- */
+.ceo_greeting {position:relative; overflow:hidden; padding-top:150px;}
+.ceo_greeting::after {display:block; content: ''; width:1192px; height:242px; background:url(../image/sub/bg_greeting.png) no-repeat 0 0; position:absolute; right:-300px; bottom:140px; opacity:.21;}
+.ceo_greeting .greeting_01 {margin-top:48px; font-size:3.6rem; font-weight:400;}
+.ceo_greeting .greeting_02 {margin-top:48px; line-height:1.625em; color:#3B3B3B;}
+.ceo_greeting .greeting_03 {margin-top:35px; display:flex; justify-content: flex-end; align-items:center;}
+.ceo_greeting .greeting_03 strong {margin-left:22px; display:block; width:79px; height:60px; background:url(../image/sub/greeting.png) no-repeat 0 0; background-size: 100% auto;}
+
+/* -------------------- 비전 및 경영이념 ---------------------------------------- */
+
+/* 비전 */
+.vision_wrap {padding-top:295px; margin-bottom:150px;}
+.vision_wrap .vision {padding:85px 0 155px; margin:85px 0 100px; background:url(../image/sub/bg_vision.jpg) no-repeat center center; background-size: cover;}
+.vision_wrap .vision * {color:#fff;}
+.vision_wrap .vision .sub_tit_02 {border-color: #fff;}
+.vs_txt_01 {font-size:3.6rem; font-weight:700; margin-bottom:35px;}
+.vs_txt_02 {line-height:1.7em;}
+
+/* 경영이념 */
+.phil .vs_txt_02 {line-height:1.5em;}
+.phil ul {margin-top:105px; display:flex; justify-content:space-between;}
+.phil ul li {width:333px; height:362px; background-position:0 0; background-repeat: no-repeat; background-size: 100% auto; text-align:center; padding-top:57px; box-sizing:border-box;}
+.phil ul li p {font-size:3.5rem; font-weight:700; color:#fff; padding-top:150px; background-position:top center; background-repeat: no-repeat;}
+.phil ul li:nth-child(1) {background-image: url(../image/sub/bg_phil_01.png);}
+.phil ul li:nth-child(2) {background-image: url(../image/sub/bg_phil_02.png);}
+.phil ul li:nth-child(3) {background-image: url(../image/sub/bg_phil_03.png);}
+.phil ul li:nth-child(1) p {background-image:url(../image/sub/icon_phil_01.svg);}
+.phil ul li:nth-child(2) p {background-image:url(../image/sub/icon_phil_02.svg);}
+.phil ul li:nth-child(3) p {background-image:url(../image/sub/icon_phil_03.svg);}
+.phil_res {padding:30px 0; max-width: 618px; width:100%; margin: 60px auto 0; background-color:#4E4242; border-radius: 59px; text-align:center; font-size:4.2rem; font-weight:700; box-sizing:border-box; color:#fff;}
+
+/* -------------------- 사업장소개 ---------------------------------------- */
+.location {background-color:#F8F8F8; padding:145px 0 160px;}
+.location .info {margin-top:45px; padding-bottom:35px; border-bottom:1px solid #C5C5C5; display:flex; align-items:center;}
+.location .info figure {max-width:510px; max-height:225px; flex:1;}
+.location .info ul {margin-left:28px;}
+.location .info ul li {display:flex; align-items:center;}
+.location .info ul li ~ li {margin-top:17px;}
+.location .info ul li span {padding-left:30px; font-weight:700; background-position:left center; background-repeat:no-repeat; background-size: auto 100%;}
+.location .info ul li p {margin-left:30px;}
+.location .info ul li:nth-child(1) span {background-image:url(../image/sub/icon_map.svg);}
+.location .info ul li:nth-child(2) span {background-image:url(../image/sub/icon_tel.svg);}
+.location .info ul li:nth-child(3) span {background-image:url(../image/sub/icon_fax.svg);}
+.location .map {margin-top:48px;}
+
+
+@media only screen and (max-width:1280px) {
+	/* CEO 인사말 */
+	.ceo_greeting {padding-top:120px;}
+	.ceo_greeting::after {right:-600px;}
+	.ceo_greeting .greeting_01,
+	.ceo_greeting .greeting_02,
+	.ceo_greeting .greeting_03 {margin-top:30px;}
+
+	/* 비전 및 경영이념 */
+	.vision_wrap {padding-top:200px; margin-bottom:100px;}
+	.vision_wrap .vision {margin:80px 0; padding:70px 0 120px;}
+	.phil ul {margin-top:100px;}
+	.phil_res {margin-top:20px;}
+}
+@media only screen and (max-width:1000px) {
+	/* CEO 인사말 */
+	.ceo_greeting::after {right:-800px;}
+
+	/* 비전 및 경영이념 */
+	.phil ul li {height:330px;}
+	.phil ul li p {font-size:3rem; background-size:35% auto; padding-top:130px;}
+}
+@media only screen and (max-width:850px) {
+	/* 비전 및 경영이념 */
+	.phil ul li {height:300px;}
+	.phil ul li p {background-size:30% auto; padding-top:100px;}
+}
+@media only screen and (max-width:767px) {
+	.vs_txt_01 {font-size:3.2rem;}
+	.phil .vs_txt_02 {font-size:16px;}
+	/* CEO 인사말 */
+	.ceo_greeting::after {display:none;}
+	.ceo_greeting .greeting_03 strong {margin-left:15px;}
+
+	/* 비전 및 경영이념 */
+	.vision_wrap {padding-top:150px;}
+	.phil ul {flex-wrap: wrap; justify-content:center; gap:15px; margin-top:70px;}
+	.phil ul li {width:265px; height:265px; border-radius:50%; padding-top:0; display:flex; align-items:center; justify-content:center;}
+	.phil ul li:nth-child(1) {background:#A5A0A0;}
+	.phil ul li:nth-child(2) {background:#40A6CC;}
+	.phil ul li:nth-child(3) {background:#788A76;}
+	.phil ul li p {background-size:70% auto;}
+	.phil_res {padding:15px 0; font-size:3.5rem;}
+
+	/* 사업장 소개 */
+	.location {padding-top:120px;}
+	.location .info {display:block; margin-top:30px;}
+	.location .info ul {margin:20px 0 0 0;}
+	.location .info ul li ~ li {margin-top:14px;}
+	.location .info ul li p {margin-left:20px;}
+	.location .map iframe {height:250px;}
+}
+
+/* ============================== [ 조경계획 및 설계 ] ========================================================================================== */
+.txt_cotn {padding:85px 0 160px;}
+.txt_wrap_01 {margin-bottom:75px;}
+.txt_wrap_01 p {font-size:2.4rem; line-height:1.5em;}
+.txt_wrap_01 p ~ p {margin-top:35px;}
+
+.txt_wrap_02 .cotn {display:flex; justify-content:space-between;}
+.txt_wrap_02 .cotn.rgt {flex-direction: row-reverse;}
+.txt_wrap_02 .cotn ~ .cotn {margin-top:60px;}
+.txt_wrap_02 .cotn .txt_area {margin-right:20px;}
+.txt_wrap_02 .cotn.rgt .txt_area {margin:0 0 0 20px;}
+.txt_wrap_02 .cotn h3 {font-size:3.6rem; font-weight:400; margin-bottom:30px;}
+.txt_wrap_02 .cotn .tit {font-size:2.1rem; margin-bottom:20px; font-weight: 700;}
+.txt_wrap_02 .cotn .des ~ .des {margin-top:15px;}
+.txt_wrap_02 .cotn .img_area figure {width: 600px;}
+.txt_wrap_02 .cotn.rgt .img_area figure {width: 570px;}
+.txt_wrap_02 ol {display:flex; flex-wrap: wrap; justify-content:space-between; margin-top:-54px;}
+.txt_wrap_02 ol li {width:calc(50% - 17px); margin-top:54px;}
+.txt_wrap_02 ol li .cotn {display:block;}
+.txt_wrap_02 ol li .cotn .des {height:60px;}
+.txt_wrap_02 ol li .cotn .img_area {margin-top:18px;}
+.txt_wrap_02 ol li .cotn .img_area figure {width: 100%;}
+.txt_wrap_02 ol li .cotn .txt_area {margin:0;}
+.txt_wrap_02 ol li .cotn .tit {font-size:2.4rem; font-weight:700;}
+
+.txt_wrap_03 {margin-bottom:75px; margin-top:-37px;}
+.txt_wrap_03 p {font-size:1.8rem; line-height:1.556em;}
+.txt_wrap_03 p ~ p {margin-top:30px;}
+
+.land_bg {width:100%; height:373px; margin-top:77px;}
+.land_bg span {display:block; width:100%; height:100%; background-image:url(../image/sub/bg_land.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover; background-attachment:fixed}
+
+.prc_li {margin-top:115px;}
+.land_bg ~ .prc_li {margin-top:80px;}
+.prc_li .des {font-size:2.1rem; font-weight:700;}
+.prc_li ol {display:flex; flex-wrap: wrap; margin-top:-24px;}
+.prc_li .des ~ ol {margin-top:0;}
+.prc_li ol li {width:180px; height:255px; margin-top:37px; background-color:#ECF1F2; border-radius:34px; padding:28px 26px 0; box-sizing:border-box;}
+.prc_li ol li:not(:last-child) {margin-right:60px; position:relative;}
+.prc_li ol li:not(:last-child)::after {display:block; content: ''; background: url(../image/sub/arr_left_gray.svg) no-repeat 0 0; background-size:32px auto; width:32px; height:32px; position:absolute; right:-43px; bottom:calc(50% - 16px);}
+.prc_li ol li span {display:block; width:53px; height:53px; margin:0 auto 20px; border-radius:50%; background-color:#00AEEF; font-size:2.3rem; font-weight:700; line-height:53px; text-align:center; color:#fff;}
+.prc_li ol li strong {margin-bottom:12px; font-size:2.3rem; line-height:1.391em; text-align:center; display:block;}
+.prc_li ol li p {font-size:1.5rem; text-align:center; line-height:1.3em; word-break: break-all;}
+
+@media only screen and (max-width:1280px) {
+	.txt_wrap_02 .cotn .img_area figure {width:490px;}
+	.txt_wrap_02 .cotn.rgt .img_area figure {width:460px;}
+	.txt_wrap_02 ol li .cotn .des {height:78px;}
+	.txt_wrap_02 ol li .cotn .img_area {margin-top:5px;}
+	.prc_li ol li {padding:20px 20px 0;}
+	.prc_li ol li:not(:last-child) {margin-right:45px;}
+	.prc_li ol li:not(:last-child)::after {right:-38px;}
+}
+@media only screen and (max-width:1000px) {
+	.txt_wrap_02 .cotn {display:block;}
+	.txt_wrap_02 .cotn ~ .cotn {margin-top:80px;}
+	.txt_wrap_02 .cotn .img_area {margin-top:20px;}
+	.txt_wrap_02 .cotn .txt_area {margin:0;}
+	.txt_wrap_02 .cotn.rgt .txt_area {margin:0;}
+}
+@media only screen and (max-width:767px) {
+	.txt_cotn {padding:70px 0 120px;}
+	.txt_wrap_02 .cotn .des  {font-size:13px;}
+	.txt_wrap_02 ol {display:block; margin-top:0px;}
+	.txt_wrap_02 ol li {width:100%; margin-top:30px;}
+	.txt_wrap_02 ol li .cotn .des {height:auto;}
+	.txt_wrap_02 ol li .cotn .img_area {margin-top:10px;}
+	.txt_wrap_02 ol li .cotn .tit {margin-bottom:10px;}
+	.land_bg {height:300px; margin-top:60px;}
+	.prc_li {margin-top:80px;}
+	.prc_li .des {margin-bottom:30px;}
+	.prc_li ol li {margin-top:0; width:100%; height:auto; padding:12px;}
+	.prc_li ol li p {font-size:14px; word-break: keep-all;}
+	.prc_li ol li span {margin-bottom:10px; width:42px; height:42px; line-height:42px;}
+	.prc_li ol li:not(:last-child) {margin:0 0 45px 0;}
+	.prc_li ol li:not(:last-child)::after {transform: rotate(90deg); bottom:-37px; right:calc(50% - 16px);}
+	.txt_wrap_03 {margin-bottom: 100px;}
+}
+@media only screen and (max-width:550px) {
+	.txt_wrap_02 .cotn .img_area figure ,
+	.txt_wrap_02 .cotn.rgt .img_area figure {width:100%;}
+}
